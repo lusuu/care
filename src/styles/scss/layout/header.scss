@@ -78,12 +78,33 @@
       margin-right: 15px;
     }
 
-    @include media("<widescreen") {
+    @include media("<desktop") {
       display: none;
     }
 
     .btn {
       margin-left: 30px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      @include media("<widescreen") {
+        font-size: 16px;
+        margin-left: 15px;
+        padding: 17px 12px 12px;
+      }
+
+      @include media("<desktop") {
+        padding: 17px 10px 12px;
+        font-size: 14px;
+        margin-left: 10px;
+
+        .fa {
+          margin-right: 5px;
+          font-size: 22px;
+        }
+      }
 
       &:hover {
         .cross {
@@ -99,6 +120,12 @@
       fill: $color-red;
       vertical-align: top;
       transition: fill .25s;
+
+      @include media("<desktop") {
+        margin: 1px 5px 5px 0;
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 
@@ -131,6 +158,10 @@
     font: 14px/16px $nav-font-family;
     padding: 21px 0 0 59px;
 
+    @include media("<widescreen") {
+      padding-left: 30px;
+    }
+
     @include media("<tablet") {
       font-size: 17px;
       line-height: 24px;
@@ -139,6 +170,10 @@
 
     > li {
       padding: 0 52px 33px 0;
+
+      @include media("<widescreen") {
+        padding-right: 25px;
+      }
 
       @include media("<tablet") {
         padding: 0 40px 24px 0;
@@ -309,6 +344,17 @@
       }
     }
 
+    .btn-holder {
+      @include media("<desktop") {
+        display: block;
+        margin: 3px -15px 0 0;
+      }
+
+      @include media("<tablet") {
+        display: none;
+      }
+    }
+
     .navbar-brand {
       display: none;
 
@@ -331,6 +377,10 @@
 
     .navbar-right {
       margin-right: 35px;
+
+      @include media("<desktop") {
+        margin-right: 0;
+      }
     }
   }
 
