@@ -1,0 +1,58 @@
+/*
+ * Contact buttons
+ */
+
+.contact-buttons {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  margin-left: -105px;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  background: $color-white;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 2px rgba($color-black, .2);
+  overflow: hidden;
+
+  a {
+    min-width: 0;
+    text-transform: none;
+    padding: 10px 16px;
+    display: inline-block;
+    vertical-align: top;
+    transition: background .25s, color .25s;
+    font: 14px/16px $font-family-bold;
+    letter-spacing: 0;
+    
+    &:hover {
+      color: $color-white;
+      background: $color-green;
+      text-decoration: none;
+    }
+
+    + a {
+      border-left: 1px solid $color-grey;
+    }
+    
+    &.emergency {
+      color: $color-red;
+
+      &:hover {
+        color: $color-white;
+        background: $color-red;
+      }
+    }
+
+    i {
+      margin-right: 9px;
+    }
+
+    .cross {
+      width: 11px;
+      height: 11px;
+      fill: $color-red;
+      margin-right: 3px;
+    }
+  }
+}

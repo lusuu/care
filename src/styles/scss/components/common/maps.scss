@@ -1,0 +1,46 @@
+/*
+ * Google maps
+ */
+
+.contact-map-holder {
+  padding-bottom: 86%;
+  margin-bottom: 19px;
+}
+
+.map-link {
+  float: right;
+  font: 14px $font-family-regular;
+  color: $color-dark;
+
+  @include media("<tablet") {
+    margin: 0 5px 20px 0;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $color-green;
+  }
+
+  i {
+    color: $color-green;
+    font-size: 18px;
+    margin: 1px 0 0 3px;
+    vertical-align: top;
+  }
+}
+
+#contact-map {
+  position: absolute !important;
+  height: 100%;
+  width: 100%;
+}
+
+.map-holder {
+  padding-bottom: 28%;
+  margin: 50px 0 15px;
+
+  @include media("<tablet") {
+    margin: 6px 0 0;
+    padding-bottom: 60%;
+  }
+}

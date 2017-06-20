@@ -1,0 +1,99 @@
+<!--
+  Component: Contact form
+-->
+<div class="contact-form">
+  <div role="form" class="wpcf7">
+    <div class="screen-reader-response"></div>
+    <form action="#" class="wpcf7-form" novalidate="novalidate">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="input-field">
+            <label for="full-name">Full Name</label>
+            <span class="wpcf7-form-control-wrap">
+              <input type="text" name="your-name" id="full-name" value="" size="40" class="wpcf7-form-control form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+            </span>
+          </p>
+
+          <p class="input-field">
+            <label for="email">Email</label>
+            <span class="wpcf7-form-control-wrap">
+              <input type="email" name="your-email" id="email" value="" size="40" class="wpcf7-form-control form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false">
+            </span>
+          </p>
+
+          <p class="input-field">
+            <label for="number">Phone Number</label>
+            <span class="wpcf7-form-control-wrap">
+              <input type="number" name="your-phone" id="number" value="" class="wpcf7-form-control form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number" aria-required="true" aria-invalid="false">
+            </span>
+          </p>
+
+          <p class="input-field">
+            <label for="suburb">Current Suburb (optional)</label>
+            <span class="wpcf7-form-control-wrap">
+              <input type="text" name="your-suburb" id="suburb" value="" size="40" class="wpcf7-form-control form-control wpcf7-text" aria-invalid="false">
+            </span>
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <p class="input-field">
+            <label class="label select-label">How did you find out about us (optional)</label>
+            <span class="wpcf7-form-control-wrap">
+              <select name="about-us" class="wpcf7-form-control wpcf7-select custom-select">
+                <option value="hide">How did you find out about us (optional)</option>
+                <option value="General enquiry">Option 1</option>
+                <option value="I am a new patient">Option 2</option>
+                <option value="I am a GP">Option 3</option>
+              </select>
+            </span>
+          </p>
+          <p class="input-field">
+            <label class="label select-label">Nature of Request</label>
+            <span class="wpcf7-form-control-wrap">
+              <select name="your-request" class="wpcf7-form-control wpcf7-select custom-select wpcf7-validates-as-required"  aria-required="true" aria-invalid="false">
+                <option value="hide">Nature of Request</option>
+                <option value="General enquiry">Option 1</option>
+                <option value="I am a new patient">Option 2</option>
+                <option value="I am a GP">Option 3</option>
+              </select>
+            </span>
+          </p>
+          <p class="input-field">
+            <label for="message">Message*</label>
+            <span class="wpcf7-form-control-wrap">
+              <textarea name="your-message" id="message" cols="40" rows="10" minlength="10" class="wpcf7-form-control form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></textarea>
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-md-push-6">
+          <div class="agree-send-block">
+            <div class="agree-box">
+              <p class="input-field">
+                <span class="wpcf7-form-control-wrap your-accept">
+                  <span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required your-accept">
+                    <span class="wpcf7-list-item first last">
+                      <input type="checkbox" name="your-accept[]" value="" id="agree-terms-conditions" class="custom-checkbox">
+                      <label for="agree-terms-conditions"></label>
+                      <span class="wpcf7-list-item-label"></span>
+                    </span>
+                  </span>
+                </span>
+                <label class="text your-accept-label">I agree to the <a href="#">Terms &amp; Conditions</a></label>
+              </p>
+            </div>
+
+            <div class="button-box">
+              <input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit btn btn-success">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-pull-6">
+          <div class="wpcf7-response-output wpcf7-display-none"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

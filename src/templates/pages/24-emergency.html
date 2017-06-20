@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- meta info -->
+  @@include('templates/head/meta.html')
+  @@include('templates/head/favicon.html')
+  <!-- title of the page -->
+  <title>Title</title>
+  <!-- include styles -->
+  @@include('templates/head/styles.html')
+</head>
+<body>
+  <div class="wrapper">
+    <!-- header of the page -->
+    @@include('templates/layout/header.html', {"fixed": true})
+
+    <!-- hero block -->
+    <div class="hero" style="background-image: url(images/hero-post.jpg);">
+      <div class="hero-block">
+        <div class="container-fluid"><h1>24 Hour Emergency</h1></div>
+      </div>
+    </div>
+
+    <!-- main area of the page -->
+    <main class="main">
+      <div class="container-fluid">
+        <!-- content -->
+        @@include('templates/components/pages/24-emergency/content.html')
+        <!-- faq section -->
+        @@include('templates/components/common/faq.html')
+        <!-- content block with image -->
+        @@include('templates/components/common/content-block.html')
+      </div>
+      <!-- information section -->
+      @@include('templates/components/common/info.html')
+    </main>
+
+    <!-- footer of the page -->
+    @@include('templates/layout/footer.html')
+  </div>
+  <!-- include scripts -->
+  @@include('templates/head/scripts.html')
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcfoZUWT5SN61JJw2fUWxwH-RUElRNrDk&callback=contactMap"
+      async defer></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+/*
+ * About us
+ */
+
+.about-us {
+  padding: 107px 0 175px;
+
+  @include media("<desktop") {
+    padding: 52px 0;
+  }
+
+  &-holder {
+    padding: 0 100px 0 150px;
+
+    @include media("<widescreen") {
+      padding: 0 50px;
+    }
+
+    @include media("<tablet") {
+      padding: 0 0 0 30px;
+    }
+  }
+
+  .image-holder {
+    float: left;
+    width: 268px;
+
+    @include media("<widescreen") {
+      width: 200px;
+    }
+
+    @include media("<desktop") {
+      width: 170px;
+    }
+
+    @include media("<tablet") {
+      width: 50px;
+    }
+  }
+
+  h4 {
+    overflow: hidden;
+    padding-left: 182px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+    @include media("<widescreen") {
+      padding-left: 50px;
+    }
+
+    @include media("<tablet") {
+      padding: 31px 0 0 21px;
+    }
+  }
+
+  &-content {
+    overflow: hidden;
+    padding-left: 182px;
+
+    @include media("<widescreen") {
+      padding-left: 50px;
+    }
+
+    @include media("<tablet") {
+      clear: both;
+      padding: 17px 0 0;
+    }
+  }
+
+  .read-more {
+    @include media("<tablet") {
+      span {
+        max-width: none;
+        padding: 0;
+      }
+    }
+
+    &:hover {
+      i {
+        right: -14px;
+
+        @include media("<tablet") {
+          right: -2px;
+        }
+      }
+    }
+
+    i {
+      font-size: 43px;
+      transition: right .25s;
+      top: -5px;
+      right: 4px;
+
+      @include media("<tablet") {
+        font-size: 26px;
+        top: -2px;
+        right: -2px;
+      }
+    }
+  }
+}

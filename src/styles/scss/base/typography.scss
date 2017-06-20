@@ -1,0 +1,95 @@
+/*
+ * Typography
+ *
+ * Includes imported typography from Bootstrap v3.3.6 | MIT License | (http://getbootstrap.com)
+ */
+@import "../vendor/bootstrap/scss/type";
+
+body {
+  letter-spacing: .4px;
+
+  @include media("<tablet") {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+p {
+  margin-bottom: 26px;
+
+  @include media("<tablet") {
+    margin-bottom: 20px;
+  }
+}
+
+h1, .h1 {
+  margin: 0 0 26px;
+  line-height: ceil($font-size-h1 * 1.146);
+
+  @include media("<tablet") {
+    font-size: ceil($font-size-h1 * .51);
+    line-height: ceil($font-size-h1 * .74);
+  }
+}
+
+h2, .h2 {
+  margin: 0 0 26px;
+  line-height: $headings-line-height;
+
+  @include media("<tablet") {
+    font-size: ceil($font-size-h2 * .53);
+    line-height: ceil($font-size-h2 * .74);
+    margin: 0 0 18px;
+  }
+}
+
+h3, .h3 {
+  margin: 0 0 25px;
+  line-height: ceil($font-size-h3 * 1.15);
+  font-family: $font-family-bold;
+
+  @include media("<tablet") {
+    font-size: ceil($font-size-h3 * .77);
+    line-height: ceil($font-size-h3 * 1.1);
+    margin-bottom: 13px;
+  }
+}
+
+h4, .h4 {
+  margin: 0 0 20px;
+  line-height: ceil($font-size-h4 * 1.15);
+  letter-spacing: 3px;
+  font-family: $font-family-regular;
+
+  @include media("<tablet") {
+    font-size: ceil($font-size-h4 * .7);
+    line-height: ceil($font-size-h4);
+    letter-spacing: 2px;
+  }
+}
+
+h5, .h5 {
+  margin: 0 0 20px;
+  line-height: ceil($font-size-h5 * 1.15);
+
+  @include media("<tablet") {
+    font-size: ceil($font-size-h5 * .9);
+    line-height: ceil($font-size-h5);
+  }
+}
+
+h6, .h6 {
+  margin: 0 0 20px;
+  line-height: ceil($font-size-h6 * 1.15);
+  
+  @include media("<tablet") {
+    font-size: ceil($font-size-h6 * .9);
+    line-height: ceil($font-size-h6);
+  }
+}
+
+.content {
+  h2 {
+    color: $color-green;
+  }
+}

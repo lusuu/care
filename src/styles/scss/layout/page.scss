@@ -1,0 +1,87 @@
+/*
+ * Page layout
+ *
+ * Set general layout, position of child elements
+ */
+
+.navbar-opened {
+  @include media("<tablet") {
+    height: 100%;
+    overflow: hidden;
+
+    body {
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+}
+
+.wrapper {
+  padding-top: 90px;
+  position: relative;
+  overflow: hidden;
+
+  .template-home & {
+    padding-top: 0;
+  }
+
+  @include media("<tablet") {
+    padding-top: 63px;
+  }
+
+  &:after {
+    content: "";
+    width: 16px;
+    height: 100%;
+    background: $color-green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    @include media("<tablet") {
+      width: 4px;
+    }
+  }
+
+  &.page-home {
+    padding-top: 0;
+  }
+}
+
+.container-fluid {
+  max-width: $container-large-desktop;
+}
+
+.content {
+  padding-bottom: 75px;
+
+  @include media("<tablet") {
+    padding-bottom: 15px;
+  }
+
+  img {
+    margin-bottom: 40px;
+
+    @include media("<tablet") {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.main {
+
+  @include media("<widescreen") {
+    padding-left: 16px;
+  }
+
+  @include media("<tablet") {
+    padding-left: 4px;
+  }
+}
+
+.content-text {
+  @include media("<tablet") {
+    padding: 0 0 0 32px;
+  }
+}

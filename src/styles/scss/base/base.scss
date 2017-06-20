@@ -1,0 +1,133 @@
+/*
+ * Base rules
+ *
+ * Normalize behavior and default elements properties
+ *
+ * Includes imported scaffolding from Bootstrap v3.3.6 | MIT License | (http://getbootstrap.com)
+ * and normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css
+ */
+@import "../vendor/bootstrap/scss/normalize";
+@import "../vendor/bootstrap/scss/scaffolding";
+
+html,
+body {
+  min-width: 320px;
+}
+
+a {
+  transition: color 350ms, background-color 350ms, border-color 350ms;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+img {
+  vertical-align: top;
+}
+
+/* reset form styles */
+textarea {
+  resize: vertical;
+}
+
+input[type=submit],
+button {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  appearance: none;
+}
+
+input[type=password] {
+  -webkit-text-security: disc;
+}
+
+input[type=text],
+input[type=email],
+input[type=search],
+input[type=password],
+input[type=file],
+input[type=number],
+input[type=url],
+textarea {
+  appearance: none;
+  border-radius: 0;
+}
+
+input[type=submit] {
+  appearance: none;
+  transition: color 350ms, background-color 350ms, border-color 350ms;
+}
+
+input[type=image] {
+  border: 0;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-modify: read-write-plaintext-only;
+}
+
+input[type=number]::-webkit-outer-spin-button {
+  margin: 0;
+}
+
+/* remove IE clear field X button */
+input::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+main ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom: 30px;
+
+  @include media("<tablet") {
+    margin-bottom: 20px;
+  }
+
+  li {
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      position: absolute;
+      left: -16px;
+      top: 11px;
+      background: $color-black;
+    }
+  }
+}
+
+/* fix for issue in mobile devices with position fixed elements */
+@media (orientation: landscape) {
+  body {
+    width: 100%;
+  }
+}

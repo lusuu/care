@@ -1,0 +1,154 @@
+/*
+ * Thumbnails
+ */
+
+.thumbnails {
+  padding-bottom: 53px;
+
+  @include media("<tablet") {
+    padding-bottom: 30px;
+  }
+
+  .heading {
+    @include clearfix;
+
+    h2 {
+      margin-bottom: 37px;
+      float: left;
+
+      @include media("<tablet") {
+        margin-bottom: 24px;
+      }
+    }
+
+    .all-blogs {
+      float: right;
+      color: $color-black;
+      font-family: $font-family-bold;
+      margin: 7px -2px 0 0;
+
+      @include media("<tablet") {
+        margin: 1px 7px 0 0;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $color-green;
+      }
+
+      i {
+        font-size: 46px;
+        line-height: 26px;
+        vertical-align: top;
+        margin: 0 0 0 8px;
+
+        @include media("<tablet") {
+          font-size: 17px;
+          margin: -3px 0 0 4px;
+        }
+      }
+    }
+  }
+}
+
+.thumbnail {
+  @include clearfix;
+
+  .posts & {
+    margin-bottom: 58px;
+
+    @include media("<tablet") {
+      margin-bottom: 11px;
+    }
+  }
+
+  @include media("<tablet") {
+    margin-bottom: 11px;
+  }
+
+  .thumbnail-image {
+    margin-bottom: 26px;
+    transition: box-shadow .25s, opacity .25s;
+    max-width: 100%;
+
+    @include media("<tablet") {
+      float: left;
+      max-width: 35%;
+      margin-bottom: 0;
+    }
+  }
+
+  .caption {
+    @include media("<tablet") {
+      overflow: hidden;
+      padding: 2px 0 0 30px;
+      position: relative;
+    }
+  }
+
+  &-time {
+    padding-bottom: 11px;
+    font: 14px $font-family-regular;
+    color: $color-dark;
+    display: block;
+
+    @include media("<tablet") {
+      font-size: 11px;
+      color: $color-green;
+    }
+  }
+
+  h3 {
+    color: $color-green;
+    margin-bottom: 3px;
+
+    @include media("<tablet") {
+      color: $color-black;
+    }
+  }
+
+  p {
+    color: $color-black;
+    margin-bottom: 16px;
+
+    @include media("<tablet") {
+      display: none;
+    }
+  }
+
+  .read-more {
+    @include media("<tablet") {
+      position: absolute;
+      bottom: 1px;
+      right: -5px;
+
+      i {
+        font-size: 17px;
+      }
+    }
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+      color: $color-green;
+
+      .thumbnail-image {
+        box-shadow: 0 30px 60px 0 rgba($color-black, .2);
+        opacity: .5;
+      }
+
+      .read-more {
+        span {
+          max-width: 150px;
+          padding-right: 6px;
+
+          @include media("<tablet") {
+            max-width: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

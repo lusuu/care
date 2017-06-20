@@ -1,0 +1,58 @@
+/*
+ * Breadcrumbs
+ */
+
+.breadcrumbs {
+  @include list-unstyled;
+
+  margin: 0;
+  padding: 15px 160px 0 0;
+  font-size: 0;
+
+  @include media("<tablet") {
+    padding-right: 0;
+  }
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 20px;
+    position: relative;
+    font: 14px $breadcrumbs-font-family;
+    color: $breadcrumbs-color;
+
+    @include media("<tablet") {
+      font-size: 11px;
+      padding-right: 17px;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: "\f105";
+      font: normal normal normal 18px/1 FontAwesome;
+      position: absolute;
+      right: 5px;
+      top: 1px;
+      color: $breadcrumbs-arrow-color;
+
+      @include media("<tablet") {
+        right: 4px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  a {
+    color: $breadcrumbs-color;
+
+    &:hover {
+      color: $breadcrumbs-hover-color;
+      text-decoration: none;
+    }
+  }
+}

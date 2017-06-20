@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- meta info -->
+  @@include('templates/head/meta.html')
+  @@include('templates/head/favicon.html')
+  <!-- title of the page -->
+  <title>Title</title>
+  <!-- include styles -->
+  @@include('templates/head/styles.html')
+</head>
+<body>
+  <div class="wrapper">
+    <!-- header of the page -->
+    @@include('templates/layout/header.html', {"fixed": true})
+
+    <!-- hero block -->
+    <div class="hero" style="background-image: url(images/hero-post.jpg);">
+      <div class="hero-block">
+        <div class="container-fluid">
+          <h1>Surgery</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- main area of the page -->
+    <main class="main">
+      <div class="container-fluid">
+        <!-- content -->
+        @@include('templates/components/pages/surgery/content.html')
+        <!-- gallery section -->
+        @@include('templates/components/common/gallery.html')
+        <!-- thumbnails section -->
+        @@include('templates/components/common/thumbnails.html', {"title": "Surgery Articles", "link": true})
+        <!-- services section -->
+        @@include('templates/components/common/services.html')
+        <!-- questions section -->
+        @@include('templates/components/common/questions.html')
+      </div>
+      <!-- information section -->
+      @@include('templates/components/common/info.html')
+    </main>
+
+    <!-- footer of the page -->
+    @@include('templates/layout/footer.html')
+  </div>
+  <!-- include scripts -->
+  @@include('templates/head/scripts.html')
+</body>
+</html>

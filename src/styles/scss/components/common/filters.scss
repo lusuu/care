@@ -1,0 +1,41 @@
+/*
+ * Filters
+ */
+
+.filters {
+  @include clearfix;
+  padding-bottom: 48px;
+
+  @include media("<tablet") {
+    padding-bottom: 28px;
+  }
+
+  .dropdown {
+    font-family: $font-family-bold;
+    display: inline-block;
+    vertical-align: top;
+
+    .dropdown-menu {
+      left: 0;
+      width: 270px;
+
+      @include media("<tablet") {
+        width: 200px;
+        font: 14px $font-family-light;
+      }
+
+      &:before {
+        left: 210px;
+        top: 11px;
+
+        @include media("<tablet") {
+          left: 90px;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    float: right;
+  }
+}

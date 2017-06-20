@@ -1,0 +1,68 @@
+/*
+ * Share this
+ */
+
+.share-this {
+  float: right;
+  margin-top: -31px;
+  font-family: $font-family-bold;
+
+  @include media("<tablet") {
+    position: absolute;
+    bottom: -24px;
+    right: 30px;
+  }
+
+  a {
+    color: $share-link-color;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  i {
+    margin-left: 11px;
+  }
+
+  .dropdown-menu {
+    left: -15px;
+
+    @include media("<widescreen") {
+      left: -25px;
+    }
+
+    @include media("<tablet") {
+      left: auto;
+      right: -25px;
+    }
+
+    &:before {
+      left: 125px;
+
+      @include media("<tablet") {
+        left: auto;
+        right: -25px;
+      }
+    }
+
+    li {
+      padding: 0 27px 19px 30px;
+
+      &:first-child {
+        padding-top: 25px;
+      }
+    }
+
+    a {
+      &:hover {
+        color: $share-link-hover-color;
+      }
+    }
+
+    i {
+      float: right;
+      margin-top: 2px;
+    }
+  }
+}

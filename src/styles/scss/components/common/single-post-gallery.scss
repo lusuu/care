@@ -1,0 +1,44 @@
+/*
+ * Single post gallery
+ */
+
+.single-post-gallery {
+  .slick-list {
+    img {
+      margin-bottom: 40px;
+
+      @include media("<tablet") {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .slick-dots {
+    text-align: center;
+    @include list-unstyled;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      width: 6px;
+      height: 6px;
+      margin: 0 5px;
+      border-radius: 10px;
+      background: $color-dark;
+      cursor: pointer;
+      transition: background .25s;
+
+      &:hover {
+        background: $color-green;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+}

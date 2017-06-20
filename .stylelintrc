@@ -1,0 +1,37 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "indentation": 2,
+    "max-empty-lines": 1,
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "color-no-invalid-hex": true,
+    "no-eol-whitespace": true,
+    "number-leading-zero": "never",
+    "length-zero-no-unit": true,
+    "string-quotes": "double",
+    "value-list-comma-space-after": "always",
+    "declaration-colon-space-after": "always",
+    "declaration-colon-space-before": "never",
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-ignored-properties": true,
+    "declaration-block-semicolon-newline-after": "always",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-block-semicolon-newline-before": "never-multi-line",
+    "declaration-block-no-shorthand-property-overrides": true,
+    "block-closing-brace-newline-before": "always",
+    "block-closing-brace-newline-after": "always",
+    "block-opening-brace-newline-after": "always",
+    "block-opening-brace-space-before": "always",
+    "block-no-empty": true,
+    "no-duplicate-selectors": true,
+    "comment-empty-line-before": "always",
+    "comment-whitespace-inside": "always",
+    "shorthand-property-no-redundant-values": true,
+    "selector-combinator-space-after": "always",
+    "selector-combinator-space-before": "always",
+    "media-feature-colon-space-after": "always"
+  }
+}

@@ -1,0 +1,65 @@
+// import colors
+@import "colors";
+
+// import default Bootstrap variables
+@import "vendor/bootstrap/scss/variables";
+
+// override Bootstrap variables according to project design
+// Colors
+$gray-base: $color-dark;
+$brand-success: $color-green;
+$brand-danger: $color-red;
+
+// Fonts
+$font-family-light: "europa-light", Arial, Helvetica, sans-serif;
+$font-family-regular: "europa-regular", Arial, Helvetica, sans-serif;
+$font-family-bold: "europa-bold", Arial, Helvetica, sans-serif;
+
+// Scaffolding
+$body-bg: $color-white;
+$text-color: $gray-base;
+$link-color: $brand-success;
+$link-hover-color: darken($brand-success, 10%);
+
+// Typography
+$font-size-base: 18px;
+$line-height-base: ceil($font-size-base * 1.4);
+$font-family-base: $font-family-light;
+$state-success-text: $color-green;
+$state-danger-text: $color-red;
+
+$headings-font-weight: normal;
+$font-size-h1: floor(($font-size-base * 3));
+$font-size-h2: floor(($font-size-base * 1.8));
+$font-size-h3: $font-size-base;
+$font-size-h4: floor(($font-size-base * .78));
+$font-size-h5: floor(($font-size-base * .72));
+$font-size-h6: floor(($font-size-base * .7));
+$headings-line-height: 1.5;
+
+// Grid system
+$screen-lg: 1200px;
+$container-large-desktop: (1170px + $grid-gutter-width);
+
+// Buttons
+$btn-border-radius-base: 25px;
+$btn-border-radius-large: 30px;
+$btn-success-border: $brand-success;
+$btn-success-bg: $brand-success;
+$btn-danger-border: $brand-danger;
+$btn-danger-bg: $brand-danger;
+$btn-default-color: $gray-base;
+$btn-default-bg: $color-white;
+$btn-default-border: $gray-base;
+
+// Navbar
+$navbar-default-bg: $color-white;
+$navbar-default-link-color: $color-black;
+$navbar-default-link-hover-color: $color-green;
+$navbar-collapse-max-height: none;
+
+// Dropdowns
+$dropdown-border: transparent;
+$dropdown-link-color: $color-dark;
+$dropdown-link-hover-color: $color-green;
+$dropdown-link-hover-bg: none;

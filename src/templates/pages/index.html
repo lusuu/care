@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- meta info -->
+  @@include('templates/head/meta.html')
+  @@include('templates/head/favicon.html')
+  <!-- title of the page -->
+  <title>Title</title>
+  <!-- include styles -->
+  @@include('templates/head/styles.html')
+</head>
+<body class="template-home">
+  <div class="wrapper">
+    <!-- header of the page -->
+    @@include('templates/layout/header.html', {"fixed": false})
+
+    <!-- hero block -->
+    <div class="hero">
+      <div class="hero-img" style="background-image: url(images/hero-home.jpg);"></div>
+      <div class="hero-block">
+        <div class="container-fluid">
+          <div class="col-md-7 col-sm-9 col-xs-10 hero-home">
+            <img src="images/logo-with-text.svg" alt="Care central for animal" class="logo">
+            <h1>Veterinary Specialist Hospital and 24-hour animal emergency centre, open 7 days a week.</h1>
+            <a href="#" class="btn btn-success">Make an enquiry</a>
+          </div>
+        </div>
+      </div>
+      <!-- contact buttons section (only for mobile devices) -->
+      @@include('templates/components/common/contact-buttons.html')
+    </div>
+
+    <!-- main area of the page -->
+    <main class="main">
+      <!-- who we are section -->
+      @@include('templates/components/common/about-us.html')
+      <!-- information section -->
+      @@include('templates/components/common/info.html')
+    </main>
+
+    <!-- footer of the page -->
+    @@include('templates/layout/footer.html')
+  </div>
+  <!-- include scripts -->
+  @@include('templates/head/scripts.html')
+</body>
+</html>

@@ -1,0 +1,350 @@
+/*
+ * Header of the page
+ */
+@import "../vendor/bootstrap/scss/navbar";
+
+.navbar {
+  border: 0;
+  box-shadow: 0 0 6px rgba($color-black, .25);
+
+  @include media("<tablet") {
+    box-shadow: none;
+  }
+
+  .navbar-header {
+    @include media("<tablet") {
+      padding-top: 5px;
+      box-shadow: 0 0 6px rgba($color-black, .25);
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &-collapse {
+    @include media("<tablet") {
+      transition: height .35s;
+      height: 0 !important;
+      overflow: hidden;
+      display: block;
+      position: relative;
+      background: $color-light;
+      border-top: none;
+
+      &[aria-expanded="true"] {
+        height: calc(100vh - 63px) !important;
+      }
+
+      &.in {
+        overflow-y: auto;
+      }
+    }
+  }
+
+  &-box {
+    @include media("<tablet") {
+      min-height: calc(100vh - 85px);
+      position: relative;
+      padding-bottom: 50px;
+    }
+  }
+
+  &-holder {
+    padding: 16px 0 0;
+    position: relative;
+
+    @include media("<tablet") {
+      padding-top: 0;
+    }
+
+    &:after {
+      content: "";
+      width: 16px;
+      background: $color-green;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: -3px;
+
+      @include media("<tablet") {
+        width: 4px;
+      }
+    }
+  }
+
+  .btn-holder {
+    margin-right: -50px;
+
+    @include media("<1400px") {
+      margin-right: 15px;
+    }
+
+    @include media("<widescreen") {
+      display: none;
+    }
+
+    .btn {
+      margin-left: 30px;
+
+      &:hover {
+        .cross {
+          fill: $color-white;
+        }
+      }
+    }
+
+    .cross {
+      width: 19px;
+      height: 19px;
+      margin: 2px 9px 5px 0;
+      fill: $color-red;
+      vertical-align: top;
+      transition: fill .25s;
+    }
+  }
+
+  &-brand {
+    overflow: hidden;
+    height: 40px;
+    margin: 15px 14px 0 0;
+    padding: 0;
+
+    @include media("<widescreen") {
+      margin-left: 16px;
+    }
+
+    @include media("<tablet") {
+      height: 33px;
+      margin: 15px 14px 0 20px;
+    }
+
+    img {
+      width: 126px;
+
+      @include media("<tablet") {
+        width: 102px;
+      }
+    }
+  }
+
+  .navbar-nav {
+    @include list-unstyled;
+    font: 14px/16px $nav-font-family;
+    padding: 21px 0 0 59px;
+
+    @include media("<tablet") {
+      font-size: 17px;
+      line-height: 24px;
+      padding: 30px 0 0 49px;
+    }
+
+    > li {
+      padding: 0 52px 33px 0;
+
+      @include media("<tablet") {
+        padding: 0 40px 24px 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &.open,
+      &:hover,
+      &:focus {
+        > a {
+          color: $nav-link-hover-color;
+          background: none;
+
+          &:focus {
+            color: $nav-link-hover-color;
+            background: none;
+          }
+        }
+      }
+
+      &.open {
+        @include media("<tablet") {
+          > a {
+            &:after {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      > a {
+        padding: 0;
+
+        @include media("<tablet") {
+          display: block;
+          padding-right: 10px;
+
+          &.dropdown-toggle {
+            position: relative;
+
+            &:after {
+              position: absolute;
+              content: "\f107";
+              top: 1px;
+              right: 11px;
+              font: normal normal normal 17px/1 FontAwesome;
+              transition: transform .25s;
+            }
+          }
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .dropdown-menu {
+    @include media("<tablet") {
+      font-family: $font-family-light;
+      padding-top: 24px;
+      letter-spacing: 0;
+      background: none;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    li {
+      @include media("<tablet") {
+        padding: 0 0 24px;
+        background: none;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+
+        a {
+          padding: 0 0 0 21px !important;
+        }
+      }
+    }
+
+    .soon {
+      font-family: $font-family-light;
+      display: inline-block;
+    }
+  }
+
+  .navbar-toggle {
+    border: none;
+    padding: 0;
+    font-size: 29px;
+    margin: 15px 21px 15px 0;
+    color: $color-green;
+
+    &:hover,
+    &:focus {
+      background: none;
+    }
+
+    &.collapsed {
+      .fa-times {
+        display: none;
+      }
+
+      .fa-bars {
+        display: block;
+      }
+    }
+
+    .fa-times {
+      display: block;
+    }
+
+    .fa-bars {
+      display: none;
+    }
+  }
+
+  .follow-us {
+    position: absolute;
+    bottom: 20px;
+    left: 36px;
+    font-family: $font-family-bold;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    i {
+      font-size: 21px;
+      margin-left: 6px;
+    }
+  }
+}
+
+.template-home {
+  .navbar:not(.navbar-fixed-top) {
+    position: absolute;
+    z-index: 1001;
+    background: none;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    box-shadow: none;
+
+    @include media("<tablet") {
+      top: 0;
+
+      .navbar-opened & {
+        background: $color-white;
+      }
+    }
+
+    .navbar-header {
+      @include media("<tablet") {
+        box-shadow: none;
+
+        .navbar-opened & {
+          box-shadow: 0 0 6px rgba($color-black, .25);
+        }
+      }
+    }
+
+    .navbar-brand {
+      display: none;
+
+      @include media("<tablet") {
+        .navbar-opened & {
+          display: block;
+        }
+      }
+    }
+
+    .navbar-nav {
+      @include media(">=tablet") {
+        padding: 19px 0 0 20px;
+      }
+
+      @include media(">=widescreen") {
+        margin-left: -35px;
+      }
+    }
+
+    .navbar-right {
+      margin-right: 35px;
+    }
+  }
+
+  .navbar-fixed-top {
+    animation-name: fixed-header;
+    animation-duration: .3s;
+  }
+}
+
+@keyframes fixed-header {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 0;
+  }
+}

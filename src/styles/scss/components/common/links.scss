@@ -1,0 +1,26 @@
+/*
+ * Link with icon
+ */
+
+.link-with-icon {
+  color: $color-black;
+  font-family: $font-family-bold;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-green;
+  }
+
+  i {
+    font-size: 46px;
+    line-height: 26px;
+    vertical-align: top;
+    margin: 0 18px 0 0;
+
+    @include media("<tablet") {
+      font-size: 18px;
+      line-height: 19px;
+      margin: 0 10px 0 0;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+/*
+ * Newsletter
+ *
+ */
+
+.newsletter {
+  margin-bottom: 124px;
+
+  @include media("<tablet") {
+    margin-bottom: 30px;
+  }
+
+  .img-holder {
+    float: left;
+    width: 135px;
+    padding-top: 21px;
+  }
+
+  .newsletter-block {
+    overflow: hidden;
+    padding: 0 45px 0 65px;
+
+    @include media("<widescreen") {
+      padding-right: 15px;
+    }
+
+    @include media("<desktop") {
+      padding-left: 30px;
+    }
+
+    @include media("<tablet") {
+      padding: 0 5px;
+    }
+
+    h2 {
+      margin-bottom: 33px;
+
+      @include media("<tablet") {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .inputs-holder {
+    @include clearfix;
+  }
+
+  .input-field {
+    width: 33.3%;
+    float: left;
+    padding-right: 30px;
+
+    @include media("<widescreen") {
+      padding-right: 15px;
+    }
+
+    @include media("<tablet") {
+      width: 100%;
+      float: none;
+      padding-right: 0;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+    }
+  }
+
+  .button-box {
+    @include media("<tablet") {
+      text-align: center;
+      padding-top: 13px;
+    }
+  }
+
+  .agree-send-block {
+    float: left;
+    padding-top: 12px;
+
+    @include media("<tablet") {
+      float: none;
+      padding: 0 0 21px;
+    }
+
+    a {
+      color: $color-dark;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .btn {
+    float: right;
+    margin-right: 30px;
+
+    @include media("<widescreen") {
+      margin-right: 15px;
+    }
+
+    @include media("<tablet") {
+      float: none;
+      margin-right: 0;
+    }
+  }
+}

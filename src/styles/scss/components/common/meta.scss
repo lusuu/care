@@ -1,0 +1,76 @@
+.meta {
+  text-transform: uppercase;
+  font: 14px $font-family-regular;
+  letter-spacing: 3px;
+  padding-bottom: 34px;
+
+  @include media("<tablet") {
+    font-size: 11px;
+    text-transform: none;
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+  }
+
+  time {
+    float: left;
+  }
+
+  .categories {
+    @include list-unstyled;
+    letter-spacing: -4px;
+    position: relative;
+    margin-bottom: 0;
+
+    li {
+      display: inline-block;
+      position: relative;
+      letter-spacing: 3px;
+
+      @include media("<tablet") {
+        letter-spacing: 0;
+      }
+
+      &:first-child {
+        padding-left: 46px;
+
+        @include media("<tablet") {
+          padding-left: 22px;
+        }
+
+        &:before {
+          content: "|";
+          position: absolute;
+          left: 20px;
+          top: 0;
+          display: block;
+          background: none;
+          width: auto;
+          height: auto;
+
+          @include media("<tablet") {
+            left: 9px;
+          }
+        }
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        content: "/";
+        padding: 0 5px;
+
+        @include media("<tablet") {
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+}

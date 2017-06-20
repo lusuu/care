@@ -1,0 +1,127 @@
+/*
+/*
+ * Buttons
+ *
+ * Includes imported buttons from Bootstrap v3.3.7 | MIT License | (http://getbootstrap.com)
+ */
+@import "../../vendor/bootstrap/scss/buttons";
+
+.btn {
+  font-family: $btn-font-family;
+  padding: 9px 10px;
+  min-width: 150px;
+
+  @include media("<tablet") {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 8px;
+    min-width: 120px;
+  }
+
+  &.btn-lg {
+    text-transform: uppercase;
+    padding: 17px 16px 12px;
+
+    .fa {
+      font-size: 26px;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+  }
+}
+
+.btn-default {
+  &:hover,
+  &:active,
+  &:focus {
+    @include button-variant($btn-default-bg, $btn-default-color, $btn-default-bg);
+  }
+
+  &.btn-inverse {
+    @include button-variant($btn-default-bg, transparent, $btn-default-bg);
+
+    &:hover {
+      @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+    }
+  }
+}
+
+.btn-primary {
+  &:hover,
+  &:active,
+  &:focus {
+    @include button-variant($btn-primary-bg, transparent, $btn-primary-bg);
+  }
+
+  &.btn-inverse {
+    @include button-variant($btn-primary-bg, transparent, $btn-primary-bg);
+
+    &:hover {
+      @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+    }
+  }
+}
+
+.btn-success {
+  &:hover,
+  &:active,
+  &:focus {
+    @include button-variant($btn-success-bg, transparent, $btn-success-bg);
+  }
+
+  &.btn-inverse {
+    @include button-variant($btn-success-bg, transparent, $btn-success-bg);
+
+    &:hover {
+      @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+    }
+  }
+}
+
+.btn-info {
+  &:hover,
+  &:active,
+  &:focus {
+    @include button-variant($btn-info-bg, transparent, $btn-info-bg);
+  }
+
+  &.btn-inverse {
+    @include button-variant($btn-info-bg, transparent, $btn-info-bg);
+
+    &:hover {
+      @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+    }
+  }
+}
+
+.btn-warning {
+  &:hover,
+  &:active,
+  &:focus {
+    @include button-variant($btn-warning-bg, transparent, $btn-warning-bg);
+  }
+
+  &.btn-inverse {
+    @include button-variant($btn-warning-bg, transparent, $btn-warning-bg);
+
+    &:hover {
+      @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+    }
+  }
+}
+
+.btn-danger {
+  &:hover,
+  &:active,
+  &:focus {
+    @include button-variant($btn-danger-bg, transparent, $btn-danger-bg);
+  }
+
+  &.btn-inverse {
+    @include button-variant($btn-danger-bg, transparent, $btn-danger-bg);
+
+    &:hover {
+      @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+    }
+  }
+}

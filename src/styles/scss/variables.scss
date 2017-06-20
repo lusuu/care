@@ -1,0 +1,66 @@
+// import colors
+@import "colors";
+
+// import custom and default Bootstrap variables
+@import "variables-bootstrap";
+
+// breakpoints
+$breakpoints: (
+  tablet: 768px,
+  desktop: 992px,
+  widescreen: 1230px,
+);
+
+// Hero
+$hero-heading-color: $color-green;
+
+// Forms
+$input-bg: $color-white;
+$label-color: $color-dark;
+$select-hover-bg: #f0f0f0;
+$input-border-color: #f0f0f0;
+$checkbox-color: $color-dark;
+$form-holder-bg: $color-light;
+
+// Buttons
+$btn-font-family: $font-family-bold;
+
+// Navbar
+$nav-font-family: $font-family-regular;
+$nav-link-hover-color: $color-green;
+
+// Dropdown
+$dropdown-font-family: $font-family-bold;
+
+// Breadcrumbs
+$breadcrumbs-font-family: $font-family-regular;
+$breadcrumbs-color: $color-black;
+$breadcrumbs-hover-color: $color-green;
+$breadcrumbs-arrow-color: $color-green;
+
+// Footer
+$footer-bg: $color-black;
+$footer-font-family: $font-family-regular;
+$footer-color: $color-white;
+
+// Information
+$info-bg: $color-light;
+
+// Contact list
+$contact-list-color: $color-dark;
+$contact-list-hover-color: $color-green;
+$contact-list-icon-color: $color-green;
+
+// Questions
+$questions-bg: $color-light;
+
+// Galery
+$arrow-hover-color: $color-green;
+
+// Post pagination
+$post-pagination-color: $color-dark;
+$post-pagination-hover-color: $color-green;
+
+// Share this
+$share-link-color: $color-dark;
+$share-link-hover-color: $color-green;

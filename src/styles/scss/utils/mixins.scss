@@ -1,0 +1,17 @@
+// *
+// * Mixins
+// *
+// * Includes imported mixin from Bootstrap v3.3.6 | MIT License | (http://getbootstrap.com)
+// *
+@import "../vendor/bootstrap/scss/mixins";
+
+// mixin for clear default list styles
+@mixin clear-list-styles() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    list-style-type: none;
+  }
+}

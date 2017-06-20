@@ -1,0 +1,16 @@
+/*
+ * Page: Home
+ */
+.page-home {
+  overflow: hidden;
+
+  /* support tables devices (devices with medium screen size) */
+  @media (max-width: $screen-sm-max) {
+    overflow: hidden;
+  }
+
+  /* support mobile devices (devices with small screen size) */
+  @media (max-width: $screen-xs-max) {
+    overflow: hidden;
+  }
+}

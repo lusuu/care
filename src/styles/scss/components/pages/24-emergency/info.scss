@@ -1,0 +1,11 @@
+/*
+ * Info
+ */
+
+.parking-info {
+  padding-bottom: 56px;
+
+  @include media("<tablet") {
+    padding-bottom: 30px;
+  }
+}

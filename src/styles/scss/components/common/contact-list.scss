@@ -1,0 +1,51 @@
+/*
+ * Contact list
+ */
+
+.contact-list {
+  @include clear-list-styles;
+  padding: 8px 0 54px;
+  font-size: 20px;
+
+  @include media("<tablet") {
+    font-size: 14px;
+    padding: 0 0 23px;
+  }
+
+  li {
+    margin-bottom: 18px;
+
+    @include media("<tablet") {
+      margin-bottom: 8px;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  a {
+    color: $contact-list-color;
+
+    &:hover {
+      color: $contact-list-hover-color;
+      text-decoration: none;
+    }
+
+    i {
+      color: $contact-list-icon-color;
+      font-size: 22px;
+      margin-right: 28px;
+
+      @include media("<desktop") {
+        margin-right: 5px;
+      }
+
+      @include media("<tablet") {
+        margin: 5px 15px 0 0;
+        font-size: 12px;
+        vertical-align: top;
+      }
+    }
+  }
+}

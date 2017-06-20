@@ -1,0 +1,75 @@
+/*
+ * Questions
+ */
+
+.questions {
+  background: $questions-bg;
+  margin-bottom: 100px;
+  padding: 57px 100px 57px 132px;
+
+  @include media("<desktop") {
+    padding: 30px 50px;
+  }
+
+  @include media("<tablet") {
+    padding: 32px 15px 32px 30px;
+    margin-bottom: 40px;
+  }
+
+  .logo {
+    width: 104px;
+    display: inline-block;
+    vertical-align: middle;
+
+    @include media("<desktop") {
+      width: 70px;
+    }
+
+    @include media("<tablet") {
+      width: 50px;
+    }
+  }
+
+  &-content {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: calc(100% - 110px);
+
+    @include media("<desktop") {
+      width: calc(100% - 80px);
+    }
+
+    @include media("<tablet") {
+      width: calc(100% - 60px);
+    }
+  }
+
+  h1 {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
+    @include media("<desktop") {
+      font-size: 40px;
+    }
+
+    @include media("<tablet") {
+      display: block;
+      font-size: 17px;
+      line-height: 20px;
+    }
+  }
+
+  a {
+    float: right;
+    min-width: 170px;
+    margin-top: 9px;
+
+    @include media("<tablet") {
+      float: none;
+      min-width: 50px;
+    }
+  }
+}

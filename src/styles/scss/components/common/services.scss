@@ -1,0 +1,115 @@
+/*
+ * Services list
+ */
+
+.services {
+  border-top: 1px solid $color-grey;
+  border-bottom: 1px solid $color-grey;
+  padding: 40px 83px 0 0;
+  margin: 21px 0 100px;
+
+  @include media("<desktop") {
+    padding-right: 0;
+  }
+
+  @include media("<tablet") {
+    padding: 25px 0 0;
+    margin: 0 0 20px;
+    border-bottom: none;
+  }
+
+  .heading {
+    float: left;
+    width: 185px;
+    text-transform: uppercase;
+    padding-top: 11px;
+
+    @include media("<tablet") {
+      width: 130px;
+      padding-top: 0;
+    }
+  }
+
+  &-list {
+    @include list-unstyled;
+    overflow: hidden;
+    font-size: 0;
+    letter-spacing: -4px;
+    margin-bottom: 0;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      width: 33%;
+      font-size: 18px;
+      letter-spacing: 0;
+      text-align: center;
+      padding: 0 15px 40px;
+
+      @include media("<desktop") {
+        width: 50%;
+      }
+
+      @include media("<tablet") {
+        width: 100%;
+        text-align: left;
+        font: 14px $font-family-bold;
+        padding: 0 0 12px;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+
+    a {
+      display: block;
+      border: 1px solid $color-grey;
+      color: $color-black;
+      padding: 4px 10px;
+      border-radius: 30px;
+      transition: background .25s, color .25s;
+
+      @include media("<tablet") {
+        padding: 0 15px 0 0;
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        position: relative;
+
+        &.disabled {
+          opacity: .8;
+          font-family: $font-family-light;
+        }
+      }
+
+      &:hover {
+        background: $color-grey;
+        text-decoration: none;
+
+        @include media("<tablet") {
+          background: none;
+          color: $color-green;
+        }
+      }
+
+      i {
+        display: none;
+
+        @include media("<tablet") {
+          display: block;
+          position: absolute;
+          top: 2px;
+          right: 5px;
+        }
+      }
+    }
+  }
+
+  .soon {
+    @include media("<tablet") {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
