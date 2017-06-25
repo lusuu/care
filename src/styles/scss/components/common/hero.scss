@@ -119,11 +119,5 @@
     @include media("<tablet") {
       min-width: 150px;
     }
-
-    &:hover {
-      background: $color-black;
-      border-color: $color-black;
-      color: $color-white;
-    }
   }
 }

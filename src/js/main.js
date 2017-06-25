@@ -36,7 +36,7 @@ function initPostGallery() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-  }
+  };
 
   $slick_slider.slick(settings);
 
@@ -45,7 +45,7 @@ function initPostGallery() {
       if ($slick_slider.hasClass('slick-initialized')) {
         $slick_slider.slick('unslick');
       }
-      return
+      return;
     }
 
     if (!$slick_slider.hasClass('slick-initialized')) {
@@ -60,15 +60,15 @@ function initPostGallery() {
   });
 }
 
-function detectMobile () { 
- if( navigator.userAgent.match(/Android/i)
- || navigator.userAgent.match(/webOS/i)
- || navigator.userAgent.match(/iPhone/i)
- || navigator.userAgent.match(/iPad/i)
- || navigator.userAgent.match(/iPod/i)
- || navigator.userAgent.match(/BlackBerry/i)
- || navigator.userAgent.match(/Windows Phone/i)
- ){
+function detectMobile () {
+  if( navigator.userAgent.match(/Android/i)
+     || navigator.userAgent.match(/webOS/i)
+     || navigator.userAgent.match(/iPhone/i)
+     || navigator.userAgent.match(/iPad/i)
+     || navigator.userAgent.match(/iPod/i)
+     || navigator.userAgent.match(/BlackBerry/i)
+     || navigator.userAgent.match(/Windows Phone/i)
+    ){
     $('body').addClass('mobile');
   }
 }
@@ -88,14 +88,14 @@ function initFixedHeader() {
       if (scroll >= 200) {
         navbar.addClass("navbar-fixed-top");
       } else {
-          navbar.removeClass("navbar-fixed-top");
+        navbar.removeClass("navbar-fixed-top");
       }
     }
   });
 }
 
 function initAddClass() {
-  var menu = $('.navbar-collapse')
+  var menu = $('.navbar-collapse');
   $('.navbar-toggle').click(function() {
     if ($("html").hasClass("navbar-opened")) {
       setTimeout(function() {
@@ -149,7 +149,6 @@ function initUploadFiles() {
   var files1Uploader = $(".input-file-holder").fileUploader(filesToUpload, "upload-file");
 }
 
-
 // Grayscale Images fix for IE10-IE11
 var GrayScaleFix = (function() {
   var needToFix = /(MSIE 10)|(Trident.*rv:11\.0)/.test(navigator.userAgent);
@@ -158,7 +157,7 @@ var GrayScaleFix = (function() {
     var tmpImage = new Image();
     tmpImage.onload = function() {
       var imgWrapper = document.createElement('span'),
-        svgTemplate = 
+        svgTemplate =
         '<svg xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 '+tmpImage.width+' '+tmpImage.height+'" width="100%" height="100%">' +
           '<defs>' +
           '<filter id="gray">' +
@@ -167,7 +166,7 @@ var GrayScaleFix = (function() {
           '</defs>' +
           '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="'+tmpImage.width+'" height="'+tmpImage.height+'" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="'+tmpImage.src+'" />' +
         '</svg>';
-      
+
       imgWrapper.innerHTML = svgTemplate;
       imgWrapper.className = 'grayscale-fix';
       image.parentNode.insertBefore(imgWrapper, image);

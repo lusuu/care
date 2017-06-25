@@ -81,7 +81,7 @@ h5, .h5 {
 h6, .h6 {
   margin: 0 0 20px;
   line-height: ceil($font-size-h6 * 1.15);
-  
+
   @include media("<tablet") {
     font-size: ceil($font-size-h6 * .9);
     line-height: ceil($font-size-h6);

@@ -24,7 +24,7 @@
     transition: background .25s, color .25s;
     font: 14px/16px $font-family-bold;
     letter-spacing: 0;
-    
+
     &:hover {
       color: $color-white;
       background: $color-green;
@@ -34,7 +34,7 @@
     + a {
       border-left: 1px solid $color-grey;
     }
-    
+
     &.emergency {
       color: $color-red;
 

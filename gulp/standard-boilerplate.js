@@ -59,7 +59,7 @@ module.exports = function(options) {
 
     gp.watch(
       paths.src.styles,
-      function(){ gulp.start(['styles']); });
+      function(){ gulp.start(['lint:styles', 'styles']); });
     gp.watch([
       paths.src.html,
       paths.src.scripts],
