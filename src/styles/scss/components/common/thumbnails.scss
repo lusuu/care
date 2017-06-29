@@ -68,12 +68,17 @@
 
   .thumbnail-image {
     margin-bottom: 26px;
+    padding-bottom: 69%;
     transition: box-shadow .25s, opacity .25s;
     max-width: 100%;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
 
     @include media("<tablet") {
       float: left;
       max-width: 35%;
+      padding-bottom: 28%;
       margin-bottom: 0;
     }
   }
@@ -136,6 +141,10 @@
       .thumbnail-image {
         box-shadow: 0 30px 60px 0 rgba($color-black, .2);
         opacity: .5;
+
+        @include media("<tablet") {
+          box-shadow: 0 10px 20px 0 rgba($color-black, .2);
+        }
       }
 
       .read-more {

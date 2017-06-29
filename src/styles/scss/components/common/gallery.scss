@@ -43,39 +43,28 @@
         text-decoration: none;
         color: $color-green;
 
-        img {
+        .img-holder {
           opacity: .5;
           box-shadow: 0 30px 60px 0 rgba($color-black, .2);
-        }
 
-        .grayscale-fix {
-          box-shadow: 0 30px 60px 0 rgba($color-black, .2);
+          @include media("<tablet") {
+            box-shadow: 0 10px 20px 0 rgba($color-black, .2);
+          }
         }
       }
     }
 
-    .grayscale-fix {
-      margin-bottom: 17px;
-
-      img {
-        margin-bottom: 0;
-      }
-    }
-
-    img {
+    .img-holder {
       width: 100%;
-      max-width: 100%;
-      height: auto;
+      padding-bottom: 128%;
+      background-size: cover;
+      background-position: 50% 50%;
       margin-bottom: 17px;
       transition: opacity .25s, box-shadow .25s;
 
-      &.grayscale {
-        filter: gray;
-        -webkit-filter: grayscale(100%);
-      }
-
       @include media("<tablet") {
         max-width: 35%;
+        padding-bottom: 45%;
         float: left;
       }
     }
