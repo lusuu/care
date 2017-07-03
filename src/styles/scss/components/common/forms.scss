@@ -16,7 +16,7 @@ textarea {
   height: 50px;
   border: 1px solid $input-border-color;
   background: $input-bg;
-  padding: 24px 13px 9px;
+  padding: 17px 13px 5px;
   box-shadow: none;
   border-radius: 0;
 
@@ -26,8 +26,17 @@ textarea {
 
   @include media("<tablet") {
     height: 44px;
-    padding-top: 18px;
+    padding-top: 15px;
   }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 textarea {
@@ -37,7 +46,7 @@ textarea {
   &.form-control {
     border: 1px solid $input-border-color;
     background: $input-bg;
-    padding: 24px 13px 9px;
+    padding: 17px 13px 9px;
     box-shadow: none;
     border-radius: 0;
 
@@ -82,7 +91,11 @@ textarea {
 
   .wpcf7-form-control {
     width: 100%;
-    padding: 24px 13px 9px;
+    padding: 17px 13px 5px;
+
+    @include media("<tablet") {
+      padding-top: 15px;
+    }
   }
 
   &-file,
@@ -114,6 +127,22 @@ textarea {
       @include media("<tablet") {
         font-size: 18px;
         top: 12px;
+      }
+    }
+
+    br {
+      display: none;
+    }
+
+    .wpcf7-form-control-wrap {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 50px;
+
+      @include media("<tablet") {
+        height: 44px;
       }
     }
   }

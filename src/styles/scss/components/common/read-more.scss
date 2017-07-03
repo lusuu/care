@@ -6,12 +6,18 @@
   padding-right: 20px;
   position: relative;
   font-family: $font-family-bold;
+  display: inline-block;
+  vertical-align: top;
 
   i {
     position: absolute;
     right: 9px;
     top: 2px;
     font-size: 30px;
+
+    @include media("<tablet") {
+      top: 4px;
+    }
   }
 
   span {
@@ -22,6 +28,11 @@
     vertical-align: middle;
     transition: max-width .5s, padding .5s;
     white-space: nowrap;
+
+    @include media("<tablet") {
+      max-width: none;
+      padding-right: 6px;
+    }
   }
 
   &:hover {

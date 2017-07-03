@@ -32,38 +32,53 @@
     padding: 16px 0;
   }
 
-  &-heading {
+  &-opener {
+    display: block;
     position: relative;
     padding-right: 70px;
 
     @include media("<tablet") {
       padding-right: 30px;
     }
-  }
 
-  &-opener {
-    position: absolute;
-    font-size: 30px;
-    color: $color-black;
-    top: 50%;
-    right: 22px;
-    margin-top: -15px;
-    transition: transform .25s;
-    transform: rotate(45deg);
+    i {
+      position: absolute;
+      font-size: 30px;
+      color: $color-black;
+      top: 50%;
+      right: 22px;
+      margin-top: -15px;
+      transition: transform .25s;
+      transform: rotate(45deg);
 
-    @include media("<tablet") {
-      top: 17px;
-      right: 6px;
-      font-size: 20px;
+      @include media("<tablet") {
+        top: 17px;
+        right: 6px;
+        font-size: 20px;
+      }
+    }
+
+    span {
+      color: $color-black;
     }
 
     &.collapsed {
-      transform: rotate(0);
+      i {
+        transform: rotate(0);
+      }
     }
 
     &:hover,
     &:focus {
-      color: $color-green;
+      text-decoration: none;
+
+      i {
+        color: $color-green;
+      }
+
+      span {
+        color: $color-black;
+      }
     }
   }
 

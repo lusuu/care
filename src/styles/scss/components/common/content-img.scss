@@ -1,0 +1,21 @@
+/*
+ * Content image
+ */
+
+.content-img {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-bottom: 40px;
+
+  &:before {
+    content: "";
+    padding-bottom: 75%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  @include media("<tablet") {
+    margin-bottom: 30px;
+  }
+}

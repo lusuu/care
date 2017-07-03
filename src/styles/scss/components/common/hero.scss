@@ -62,9 +62,11 @@
       z-index: 0;
       height: 100%;
       max-width: 1092px;
-      width: 70%;
+      width: 90%;
       background-size: auto 100%;
       max-height: 950px;
+      background-position: 20% 100%;
+      background-repeat: no-repeat;
 
       @include media("<450px") {
         width: 97%;

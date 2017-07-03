@@ -123,10 +123,6 @@
 
   .read-more {
     @include media("<tablet") {
-      position: absolute;
-      bottom: 1px;
-      right: -5px;
-
       i {
         font-size: 17px;
       }
